@@ -17,6 +17,7 @@ from authomatic import Authomatic
 """
 NAMES
 """
+
 # Project name to be used in urls
 # Use dashes, not underscores!
 PROJECT_SLUG = '$NEW_PROJECT_SLUG'
