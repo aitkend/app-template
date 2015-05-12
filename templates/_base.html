@@ -12,9 +12,9 @@
     <!-- META TAGS -->
     {% include '_meta.html' %}
 
-    <!-- FONTS -->
+    <!-- FONTS --><!--
     {% include '_fonts.html' %}
-
+    -->
     <!-- CSS -->
     {{ CSS.push('less/app.less') }}
     {% block extra_css %}{% endblock extra_css %}
@@ -118,7 +118,6 @@
     {{ JS.push('js/lib/moment.js') }}
     {{ JS.push('js/lib/ZeroClipboard.js') }}
     {{ JS.push('js/copy.js') }}
-    {{ JS.push('js/ads.js') }}
     {{ JS.push('js/templates.js') }}
     {{ JS.push('js/comments.js') }}
     {{ JS.push('js/share.js') }}
@@ -128,23 +127,6 @@
 
     {% block extra_foot %}
     {% endblock extra_foot %}
-
-    {# Adhesion ad #}
-    <div id="adhesion">
-        <script type="text/javascript">
-        if (Modernizr.touch && Modernizr.mq('(max-width: 1024px)')) {
-            var ord = Math.floor(Math.random() * 1e16);
-
-            var size = '640x100';
-
-            if (Modernizr.mq('only screen and (min-width: 768px)')) {
-                size = '2048x180';
-            }
-
-            document.write('<scr' + 'ipt type="text/javascript" src="http://ad.doubleclick.net/N6735/adj/n6735.nprmobile/' + APP_CONFIG.NPR_DFP.TARGET + ';storyId=' + APP_CONFIG.NPR_DFP.STORY_ID + ';testserver=false;sz=' + size + ';ord=' + ord + '?"><\/script>');
-        }
-        </script>
-    </div>
 
     {# Setup Chartbeat last! #}
     <script type="text/javascript">
