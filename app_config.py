@@ -20,20 +20,20 @@ NAMES
 
 # Project name to be used in urls
 # Use dashes, not underscores!
-PROJECT_SLUG = '$NEW_PROJECT_SLUG'
+PROJECT_SLUG = 'app-template-testing'
 
 # Project name to be used in file paths
-PROJECT_FILENAME = '$NEW_PROJECT_FILENAME'
+PROJECT_FILENAME = 'app_template_testing'
 
 # The name of the repository containing the source
-REPOSITORY_NAME = '$NEW_REPOSITORY_NAME'
+REPOSITORY_NAME = 'app-template-testing'
 GITHUB_USERNAME = 'aitkend'
 REPOSITORY_URL = 'git@github.com:%s/%s.git' % (GITHUB_USERNAME, REPOSITORY_NAME)
 REPOSITORY_ALT_URL = None # 'git@bitbucket.org:aitkend/%s.git' % REPOSITORY_NAME'
 
 # Project name used for assets rig
 # Should stay the same, even if PROJECT_SLUG changes
-ASSETS_SLUG = '$NEW_PROJECT_SLUG'
+ASSETS_SLUG = 'app-template-testing'
 
 """
 DEPLOYMENT
@@ -55,8 +55,8 @@ ASSETS_S3_BUCKET = {
 
 DEFAULT_MAX_AGE = 20
 
-# PRODUCTION_SERVERS = ['cron.nprapps.org']
-# STAGING_SERVERS = ['cron-staging.nprapps.org']
+PRODUCTION_SERVERS = ['cron.nprapps.org']
+STAGING_SERVERS = ['cron-staging.nprapps.org']
 
 # Should code be deployed to the web/cron servers?
 DEPLOY_TO_SERVERS = False
@@ -98,7 +98,7 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '0AlXMOHKxzQVRdHZuX1UycXplRlBfLVB0UVNldHJYZmc'
+COPY_GOOGLE_DOC_KEY = '0Auf4XJCko_vBdFJ2UVF4RTA0S1ZGd0F3eDJCSmpXaVE'
 COPY_PATH = 'data/copy.xlsx'
 
 """
@@ -131,7 +131,7 @@ SERVICES
 # }
 
 # DISQUS_API_KEY = 'tIbSzEhGBE9NIptbnQWn4wy1gZ546CsQ2IHHtxJiYAceyyPoAkDkVnQfCifmCaQW'
-# DISQUS_UUID = '$NEW_DISQUS_UUID'
+# DISQUS_UUID = '23cdb597-f8f7-11e4-87d4-d49a20c1c340'
 
 """
 OAUTH
