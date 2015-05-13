@@ -5,8 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>{{ COPY.content.project_name|smarty }}</h1>
-                <h2>{{ COPY.content.lorem_ipsum|smarty }}</h2>
+                <h1>{{ COPY.post_metadata.title|smarty }}</h1>
+                <h2>{{ COPY.post_metadata.description|smarty }}</h2>
             </div>
         </div>
     </div>
@@ -15,13 +15,13 @@
 
 
 {% block content %}
-<h1>{{ COPY.content.project_name }}</h1>
+<h1>{{ COPY.post_metadata.title }}</h1>
 
 <div id="story-meta">
-    <p class="byline">by <span>{{ COPY.content.byline }}</span></p>
+    <p class="byline">by <span>{{ COPY.post_metadata.author }}</span></p>
     <p class="dateblock">
-        <span class="date">{{ COPY.content.pubdate }}</span>
-        <span class="time"> {{ COPY.content.pubtime }}</span>
+        <span class="date">{{ COPY.post_metadata.publish_date }}</span>
+        <!--<span class="time"> {{ COPY.content.pubtime }}</span>-->
     </p>
 </div>
 
@@ -36,8 +36,8 @@
 
 <h2 class="knockout-example">Example COPY list</h2>
 <dl>
-    {% for row in COPY.example_list %}
-    <dt>{{ row.term }}</dt><dd>{{ row.definition }}</dd>
+    {% for row in COPY.content %}
+    <dt>{{ row.id }}</dt><dd>{{ row.text1 }}</dd>
     {% endfor %}
 </dl>
 
