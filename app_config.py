@@ -98,9 +98,11 @@ DEBUG = True
 """
 COPY EDITING
 """
-COPY_GOOGLE_DOC_KEY = '0Auf4XJCko_vBdFJ2UVF4RTA0S1ZGd0F3eDJCSmpXaVE'
+COPY_GOOGLE_DOC_KEY = '1Ej12L83GhZhvJn0VDO7grcH-Fcx5rS4__CQI1Km_tQY'
 COPY_PATH = 'data/copy.xlsx'
-
+### 1mYdd8jp2FKUpkMoy9PHvD0kLcfTuAxqrhKizOCTzW_Y -- border-map COPY
+### 0Auf4XJCko_vBdFJ2UVF4RTA0S1ZGd0F3eDJCSmpXaVE -- barkedu template
+### 1Ej12L83GhZhvJn0VDO7grcH-Fcx5rS4__CQI1Km_tQY -- piers testing
 """
 SHARING
 """

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """
 Example application views.
-
 Note that `render_template` is wrapped with `make_response` in all application
 routes. While not necessary for most Flask apps, it is required in the
 App Template for static publishing.
@@ -29,6 +28,29 @@ def index():
     Example view demonstrating rendering a simple HTML page.
     """
     context = make_context()
+
+    # Nav needs to be a list of lists.
+    # The inner list should only have four objects max.
+    # Because of reasons.
+    context['nav'] = []
+    contents = list(context['COPY']['content'])
+    not_yet_four = []
+
+    for idx, row in enumerate(contents):
+        row = dict(zip(row.__dict__['_columns'], row.__dict__['_row']))
+        row_title = row.get('data_panel', None)
+
+        if row_title:
+            if row_title not in ['_', 'introduction', 'data_panel', 'about']:
+                not_yet_four.append(row)
+
+                if len(not_yet_four) == 4:
+                    context['nav'].append(not_yet_four)
+                    not_yet_four = []
+
+        if (idx + 1) == len(contents):
+            if len(not_yet_four) > 0:
+                context['nav'].append(not_yet_four)
 
     with open('data/featured.json') as f:
         context['featured'] = json.load(f)
